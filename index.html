@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>INTERA | Industrial Luxury Manufacturing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#e2e2e2",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "inverse-surface": "#e2e2e2",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "secondary": "#c8c6c5",
+                        "surface": "#121414",
+                        "on-primary-fixed": "#241a00",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-tint": "#e9c349",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#e9c349",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-surface": "#e2e2e2",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-variant": "#333535",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-high": "#282a2b",
+                        "surface-bright": "#38393a",
+                        "on-primary": "#3c2f00",
+                        "surface-container-low": "#1a1c1c",
+                        "primary-container": "#d4af37",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-tertiary-container": "#454545",
+                        "inverse-on-surface": "#2f3131",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-primary-container": "#554300",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#474746",
+                        "primary": "#f2ca50",
+                        "on-secondary-container": "#b7b5b4",
+                        "primary-fixed": "#ffe088",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-secondary": "#303030",
+                        "inverse-primary": "#735c00",
+                        "tertiary": "#d0cdcd",
+                        "on-tertiary": "#303030",
+                        "tertiary-container": "#b4b2b2",
+                        "background": "#121414",
+                        "surface-container-lowest": "#0c0f0f",
+                        "on-error": "#690005",
+                        "outline": "#99907c",
+                        "surface-container-highest": "#333535",
+                        "outline-variant": "#4d4635",
+                        "surface-container": "#1e2020",
+                        "surface-dim": "#121414",
+                        "gold": "#D4AF37"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "margin-tablet": "32px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Cormorant Garamond", "serif"],
+                        "label-md": ["Cormorant Garamond", "serif"],
+                        "headline-lg-mobile": ["Cormorant Garamond", "serif"],
+                        "display-lg": ["Cormorant Garamond", "serif"],
+                        "headline-md": ["Cormorant Garamond", "serif"],
+                        "headline-sm": ["Cormorant Garamond", "serif"],
+                        "body-md": ["Cormorant Garamond", "serif"],
+                        "label-lg": ["Cormorant Garamond", "serif"],
+                        "body-lg": ["Cormorant Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "display-lg": ["72px", {"lineHeight": "1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["38px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-sm": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-lg": ["16px", {"lineHeight": "1.2", "letterSpacing": "0.12em", "fontWeight": "700"}],
+                        "body-lg": ["22px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        .hero-zoom { animation: slowZoom 20s infinite alternate linear; }
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.15); }
+        }
+
+        .fade-in-slider { animation: fadeInOut 12s infinite; }
+        @keyframes fadeInOut {
+            0%, 20% { opacity: 0; }
+            25%, 45% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(18, 20, 20, 0.85);
+        }
+
+        .border-gold-thin { border-color: rgba(212, 175, 55, 0.2); }
+        
+        /* Gold gradient for cards */
+        .gold-overlay {
+            background: linear-gradient(to top, rgba(18, 20, 20, 0.95) 0%, rgba(18, 20, 20, 0.4) 50%, transparent 100%);
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Gold background */
+.bg-gold {
+  background-color: #D4AF37;
+}
+
+/* Gold text */
+.text-gold {
+  color: #D4AF37;
+}
+
+/* Hover state */
+.hover\:bg-gold:hover {
+  background-color: #D4AF37;
+}
+
+/* Optional: smooth hover */
+.bg-gold:hover {
+  filter: brightness(1.05);
+}
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-gold selection:text-surface-container-lowest overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 transition-all duration-500 border-b border-transparent" id="main-nav">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col items-start">
+  <img
+    alt="INTERA"
+    src="logotransparent.png"
+    class="h-12 w-auto object-contain brightness-125"
+  />
+
+
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#about">ABOUT</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#excellence">EXCELLENCE</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#products-slider">DOORS</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="intera-ai.html">INTERA-AI</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#clients">CLIENTS</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#team">OUR TEAM</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#location">LOCATION</a>
+
+</nav>
+
+<div class="flex items-center gap-6">
+<a class="hidden md:block bg-gold text-on-primary-fixed font-label-lg text-label-md px-6 py-3 hover:bg-white transition-all duration-300 bold" href="#contact">GET IN TOUCH</a>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-background/60 z-10"></div>
+<div class="absolute inset-0 opacity-100 transition-opacity duration-1000 overflow-hidden">
+<img alt="Industrial luxury interior" class="hero-zoom w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8n6TLRn4aXz0OydnUiOBvhuBNzurI7guWX_oZENCDmu0DXH1xFdClcTxtX4IAwfClQI8aDH_7nmknj_f3l9gPzsGkUKl9hU6MNaLKW01wPb-lnN2OxWBku_JGM0gnS_HF-lIxYvTSAC8NjTlbG8FmudNYNT40-6bv9IVs8MzpyBKygBzQTVAnpvHZzMWoQOpNuBAMR435mer4tB8GnuK82LQaB0x7zmYyS9VLCANzNleTmKT5BbK265XaLoXD8En_JljQqXFMzX5S"/>
+</div>
+<div class="absolute inset-0 opacity-0 transition-opacity duration-1000 fade-in-slider overflow-hidden" style="animation-delay: 4s;">
+<img alt="Craftsmanship precision" class="hero-zoom w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uh3pQYQg8M6IDQMLBeK-CG_k_Hpj9k1AlUfbojAm6oyAzvfowP0hFBqV30bpmry2aTFoeMvwmMj70jzqOE5f-u391u_yCLnQEYh6iuhCdbNo7sXXG6EX25IoNBda44u74_Dtbc_E_ECYAYyp-dFowoyZ3Q76WqTXZTU07koo4XaATKMwU3rbEWKXr4bkDEzQWvyiKwaQNdH7gQ21BdlAZZoegNU-aZcBaIRZQKVZvqQeq6-bkic35zPrss"/>
+</div>
+<div class="absolute inset-0 opacity-0 transition-opacity duration-1000 fade-in-slider overflow-hidden" style="animation-delay: 8s;">
+<img alt="Luxury cabinetry" class="hero-zoom w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhhfL761r8faKw-S44t0CltwKgRz8ViWVD6VPQif3MTnePE_tS9jF3d6p0Oj1WNGZMAI9LC0iQMc2wLLhk958q_ydNakV921LgBak42rmN5EEZ8RyZV4FRaDx1kxg4GJsihHWsi__FPVK6Xx3sUKqD8WaMV658I8ZyTOysBljo9Drwnw2oshfk9omufPa7FUYtpZGjV4cqaje2XCii2EcqzPY_0EXYabCnhcA3XqWoWbsYOM49K5EonDmH1"/>
+</div>
+</div>
+<div class="relative z-20 text-center text-white px-margin-mobile max-w-4xl">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg uppercase mb-4 reveal active tracking-tight">INTERA INDUSTRIES</h1>
+<p class="font-headline-md text-headline-sm mb-8 text-gold italic reveal active" style="transition-delay: 0.2s;">Manufacturing of Doors &amp; Cabinets</p>
+<p class="font-body-lg text-body-md md:text-body-lg mb-12 text-on-surface/80 reveal active max-w-2xl mx-auto" style="transition-delay: 0.4s;">Delivering high-quality doors, cabinetry solutions, and interior manufacturing excellence for the world's most demanding architectural projects.</p>
+<div class="reveal active" style="transition-delay: 0.6s;">
+<a class="inline-flex items-center gap-3 border border-gold text-gold px-12 py-5 font-label-lg text-label-md hover:bg-gold hover:text-background transition-all duration-300 group tracking-widest" href="#about">
+                DISCOVER OUR WORK
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+<span class="material-symbols-outlined text-gold text-4xl font-light">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-background" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 reveal">
+<span class="font-label-lg text-label-md text-gold mb-6 block tracking-[0.2em] uppercase">— Crafting Spaces with Precision</span>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg mb-8 uppercase text-white leading-none">Engineered Elegance For Every Interior</h2>
+<p class="font-body-lg text-body-lg text-on-surface/70 mb-8 leading-relaxed italic">
+                At Intera Industries, we bridge the gap between raw industrial capacity and bespoke luxury craftsmanship. Our vision is rooted in the belief that durability should never compromise aesthetic value.
+            </p>
+<p class="font-body-md text-body-md text-on-surface/60 mb-10 leading-relaxed">
+                With over two decades of expertise in high-end manufacturing, we utilize state-of-the-art machinery and the finest sustainably sourced materials to create doors and cabinetry that stand as architectural statements.
+            </p>
+<div class="flex gap-16 border-t border-gold-thin pt-8">
+<div>
+<div class="font-display-lg text-headline-md font-bold text-gold">24+</div>
+<div class="font-label-lg text-label-md text-on-surface/50 tracking-widest">YEARS OF MASTERY</div>
+</div>
+<div>
+<div class="font-display-lg text-headline-md font-bold text-gold">850</div>
+<div class="font-label-lg text-label-md text-on-surface/50 tracking-widest">COMPLETED PROJECTS</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-8 reveal" style="transition-delay: 0.3s;">
+<div class="relative group overflow-hidden border border-gold-thin">
+<img alt="Master craftsman" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uh3pQYQg8M6IDQMLBeK-CG_k_Hpj9k1AlUfbojAm6oyAzvfowP0hFBqV30bpmry2aTFoeMvwmMj70jzqOE5f-u391u_yCLnQEYh6iuhCdbNo7sXXG6EX25IoNBda44u74_Dtbc_E_ECYAYyp-dFowoyZ3Q76WqTXZTU07koo4XaATKMwU3rbEWKXr4bkDEzQWvyiKwaQNdH7gQ21BdlAZZoegNU-aZcBaIRZQKVZvqQeq6-bkic35zPrss"/>
+<div class="absolute bottom-0 left-0 bg-gold text-background p-10 max-w-xs">
+<p class="font-label-lg text-label-md mb-4 tracking-widest uppercase">FACTORY FLOOR</p>
+<p class="font-body-md text-lg italic">Our 50,000 sq. ft. facility combines digital precision with hand-finished excellence.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Excellence Section (Horizontal Accordion) -->
+<section class="py-24 bg-surface-container-lowest overflow-hidden" id="excellence">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16 reveal">
+<span class="font-label-lg text-label-md text-gold mb-4 block tracking-[0.2em] uppercase">— Excellence In Every Detail</span>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white leading-none">The Intera Standard</h2>
+</div>
+<div class="grid-cols-1 gap-4 reveal flex flex-col md:flex-row md:items-stretch md:h-[600px]">
+<!-- Card 1 -->
+<div class="group relative overflow-hidden bg-surface-dim border border-gold-thin/30 hover:border-gold transition-all duration-700 hover:-translate-y-2 flex-1 ease-in-out md:hover:flex-[2.5] min-h-[400px] md:min-h-0">
+<img alt="Precision Engineering" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uh3pQYQg8M6IDQMLBeK-CG_k_Hpj9k1AlUfbojAm6oyAzvfowP0hFBqV30bpmry2aTFoeMvwmMj70jzqOE5f-u391u_yCLnQEYh6iuhCdbNo7sXXG6EX25IoNBda44u74_Dtbc_E_ECYAYyp-dFowoyZ3Q76WqTXZTU07koo4XaATKMwU3rbEWKXr4bkDEzQWvyiKwaQNdH7gQ21BdlAZZoegNU-aZcBaIRZQKVZvqQeq6-bkic35zPrss"/>
+<div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-3 tracking-wide">Precision</h3>
+<p class="text-on-surface/70 text-lg italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Micron-level accuracy in every cut, ensuring a perfect fit for even the most complex architectural designs.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative overflow-hidden bg-surface-dim border border-gold-thin/30 hover:border-gold transition-all duration-700 hover:-translate-y-2 flex-1 ease-in-out md:hover:flex-[2.5] min-h-[400px] md:min-h-0" style="transition-delay: 0.1s;">
+<img alt="Premium Materials" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uiGdZrgOrcPx8fhOsjt72XBc6GPDmfi9uw_GNBVejGRGzgpxA2kmHB-SpFhDftRZYUcOVhI0wSvZOOGzwxSSk2SzsGw_vC8Z0hOm6H1sdQaQjzLytvGz5a2VluCDX-VQY5pfsBQ7HvJ_gcnhrrTF54sF-0Czg7KNX4LrkeEDC4AWMPMJEJRXmRu025mvV7l2_IxOMQi0SMa82NMAUVpIAEapnaw7CxGH0ygOKhPVSIO3Ux7rs49JjRHBLxL"/>
+<div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-3 tracking-wide">Materials</h3>
+<p class="text-on-surface/70 text-lg italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">We source only the highest grade of walnut, oak, and specialized metals to guarantee long-term durability.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative overflow-hidden bg-surface-dim border border-gold-thin/30 hover:border-gold transition-all duration-700 hover:-translate-y-2 flex-1 ease-in-out md:hover:flex-[2.5] min-h-[400px] md:min-h-0" style="transition-delay: 0.2s;">
+<img alt="Modern Machinery" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uiGdZrgOrcPx8fhOsjt72XBc6GPDmfi9uw_GNBVejGRGzgpxA2kmHB-SpFhDftRZYUcOVhI0wSvZOOGzwxSSk2SzsGw_vC8Z0hOm6H1sdQaQjzLytvGz5a2VluCDX-VQY5pfsBQ7HvJ_gcnhrrTF54sF-0Czg7KNX4LrkeEDC4AWMPMJEJRXmRu025mvV7l2_IxOMQi0SMa82NMAUVpIAEapnaw7CxGH0ygOKhPVSIO3Ux7rs49JjRHBLxL"/>
+<div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-3 tracking-wide">Technology</h3>
+<p class="text-on-surface/70 text-lg italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Utilizing the latest 5-axis CNC technology and specialized finishing chambers for superior surface quality.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative overflow-hidden bg-surface-dim border border-gold-thin/30 hover:border-gold transition-all duration-700 hover:-translate-y-2 flex-1 ease-in-out md:hover:flex-[2.5] min-h-[400px] md:min-h-0" style="transition-delay: 0.3s;">
+<img alt="Quality Assurance" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uh3pQYQg8M6IDQMLBeK-CG_k_Hpj9k1AlUfbojAm6oyAzvfowP0hFBqV30bpmry2aTFoeMvwmMj70jzqOE5f-u391u_yCLnQEYh6iuhCdbNo7sXXG6EX25IoNBda44u74_Dtbc_E_ECYAYyp-dFowoyZ3Q76WqTXZTU07koo4XaATKMwU3rbEWKXr4bkDEzQWvyiKwaQNdH7gQ21BdlAZZoegNU-aZcBaIRZQKVZvqQeq6-bkic35zPrss"/>
+<div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-3 tracking-wide">Quality</h3>
+<p class="text-on-surface/70 text-lg italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Every piece undergoes a rigorous 12-point inspection process before leaving our facility.</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group relative overflow-hidden bg-surface-dim border border-gold-thin/30 hover:border-gold transition-all duration-700 hover:-translate-y-2 flex-1 ease-in-out md:hover:flex-[2.5] min-h-[400px] md:min-h-0" style="transition-delay: 0.4s;">
+<img alt="Custom Solutions" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uhhfL761r8faKw-S44t0CltwKgRz8ViWVD6VPQif3MTnePE_tS9jF3d6p0Oj1WNGZMAI9LC0iQMc2wLLhk958q_ydNakV921LgBak42rmN5EEZ8RyZV4FRaDx1kxg4GJsihHWsi__FPVK6Xx3sUKqD8WaMV658I8ZyTOysBljo9Drwnw2oshfk9omufPa7FUYtpZGjV4cqaje2XCii2EcqzPY_0EXYabCnhcA3XqWoWbsYOM49K5EonDmH1"/>
+<div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-3 tracking-wide">Custom</h3>
+<p class="text-on-surface/70 text-lg italic opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">From single statement doors to full-building cabinetry contracts, we tailor our flow to your timeline.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Products Section -->
+<section class="py-24 bg-background overflow-hidden" id="products">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16 reveal">
+<span class="font-label-lg text-label-md text-gold mb-4 block tracking-[0.2em] uppercase">— Our Signature Collections</span>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white mb-6 leading-none">Premium Door Solutions</h2>
+<p class="font-body-lg text-body-lg text-on-surface/70 max-w-2xl italic">
+            Discover our curated range of luxury door solutions, engineered with industrial precision and finished with artistic mastery. From the natural warmth of real wood to modern high-performance finishes.
+        </p>
+</div>
+<!-- Horizontal Scroll Gallery -->
+<div class="relative group">
+<div class="flex overflow-x-auto gap-8 no-scrollbar pb-10 -mx-margin-mobile px-margin-mobile md:-mx-margin-desktop md:px-margin-desktop snap-x snap-mandatory">
+<!-- Veneer Doors -->
+<div class="flex-none w-[300px] md:w-[400px] snap-start reveal">
+<div class="aspect-square relative overflow-hidden border border-gold-thin/30 group/card">
+<img alt="Veneer Doors" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uirAR_slObO1ZXU9w11OiVp9Ir6iDvKn2nkoNVPcND6vEqKn-C09U6lfZqDWqHtL45tzWvIWO9uI0y0zlhsBDMr82W_n4FrYtFnte0ruFr7ctQ3uvOaBl8xTglpwH6Rhbn0thWTmC8X7ynC8uXNasnogXm6jpQ6yvZs2iU-hWoxWuvTiyz6r1mDyxjMJBpynqQZ7HLxQPE1AVfLlf35j9eWior34ZRK1Aq1QxyrMb-6fquWqQ0dbGVTptIO"/>
+<div class="absolute inset-0 gold-overlay opacity-60 group-hover/card:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-2">Veneer Doors</h3>
+<p class="text-on-surface/70 text-body-md line-clamp-2 italic">Exquisite natural wood grain textures for a sophisticated, high-end architectural finish.</p>
+</div>
+</div>
+</div>
+<!-- Laminate Doors -->
+<div class="flex-none w-[300px] md:w-[400px] snap-start reveal" style="transition-delay: 0.1s;">
+<div class="aspect-square relative overflow-hidden border border-gold-thin/30 group/card">
+<img alt="Laminate Doors" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0ujKx0o9ZvDtv__fYhWNzT2l9sLtO88Fa4wknfuZ5pI0dsaUiYxsOwRNx67KJo9p03didwcom1qCkIyhIDJltng_aUo-dFK6R0YSAUIVkAQ74c4lv17lnOIobi0XzV_Zy-hL6kyByQcsC2vcxxqfkP_mcm_sY9dpx6V0qe4hbuKHS_PTWJsKwrkrYk9NN4WQw33mwt0OS3rw6eutTllZpkRGWDeclCUd3p5Yv0j1t8vs3McbzYebrCi4S-Np"/>
+<div class="absolute inset-0 gold-overlay opacity-60 group-hover/card:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-2">Laminate Doors</h3>
+<p class="text-on-surface/70 text-body-md line-clamp-2 italic">Modern high-durability surfaces with sleek, consistent aesthetics and industrial resilience.</p>
+</div>
+</div>
+</div>
+<!-- Solid Wood Doors -->
+<div class="flex-none w-[300px] md:w-[400px] snap-start reveal" style="transition-delay: 0.2s;">
+<div class="aspect-square relative overflow-hidden border border-gold-thin/30 group/card">
+<img alt="Solid Wood Doors" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uh5fjpOWBZYMNADOMnEwz9uHFgjgqHrZEB093yv2HRyCvWf-S5V3365uc9Zs-pYzhUPWrMpyZfmbPEl7RShVM_GZXEKlmbQRUKutv73_MTTtIZ3ojzIF1OeNnFLDpokbgV2G9Sk6UOfdNDFi5uEAWhiTvebXHwdYZjbfHESlQksiIhrno8wi2ewOzDVOltV8JbX5zEOTCC0gMKoTWbgAnJerjcNVITIHEh1fBsL5oekEzpZaqKGko6nU1M"/>
+<div class="absolute inset-0 gold-overlay opacity-60 group-hover/card:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-2">Solid Wood Doors</h3>
+<p class="text-on-surface/70 text-body-md line-clamp-2 italic">Timeless craftsmanship using premium hardwoods for unmatched structural integrity and beauty.</p>
+</div>
+</div>
+</div>
+<!-- PU Painted Doors -->
+<div class="flex-none w-[300px] md:w-[400px] snap-start reveal" style="transition-delay: 0.3s;">
+<div class="aspect-square relative overflow-hidden border border-gold-thin/30 group/card">
+<img alt="PU Painted Doors" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uhZwQIXH8Mxmce2pyUF_tMFB9jdzjamr-v5qxt-9q8cOpvVkPvv203EARMpvBREZJyCMakHsRB2u5Kgz9eauNnJoXa5XTfsMwQtoACMo3yzigG03jWBoPYMNdpHbOFcPDXSpuydf5L8nPVWYmtBB_z5dRyPym6VijFg-VO-QffbAsl6QttzXekzaKOs9VcFPI6i7v54RnRjw18P597u1fm7I_M9mXSPq5ZqX_Upe7L5p0x3zrRpTWscLgQz"/>
+<div class="absolute inset-0 gold-overlay opacity-60 group-hover/card:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-2">PU Painted Doors</h3>
+<p class="text-on-surface/70 text-body-md line-clamp-2 italic">Ultra-smooth matte or gloss finishes providing a flawless, contemporary minimalist aesthetic.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="mt-8 flex items-center gap-4 text-gold/40">
+<span class="material-symbols-outlined">chevron_left</span>
+<div class="h-px bg-gold/20 flex-1"></div>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-background" id="team">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
+<div class="max-w-2xl">
+<span class="font-label-lg text-label-md text-gold mb-4 block tracking-[0.2em] uppercase">— People Behind The Craft</span>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white mb-6 leading-none">Expertise Meets Passion</h2>
+<p class="font-body-lg text-body-lg text-on-surface/70 italic">Our team consists of lifelong woodworkers, advanced manufacturing engineers, and project managers dedicated to excellence.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Profile 1 -->
+<div class="reveal">
+<div class="aspect-square mb-6 overflow-hidden bg-surface-container-high border border-gold-thin/30">
+<img alt="Julian Vance" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida/ADBb0uifMnNNzMfYze7tQ6U3eBCUXFLk6FYfkBM-AAK8Qx6-F4s-F6540oM7udyj_-s81_1I9aawAoZ9U5gdGvFKhlNzysuUxeBlLD8n0_ybrbwGUz2Y2lTPnjtdXfbfQj-TR8U1GBOhV2_4QTc3M870mTtmBctsO048Fmtxom2Gc49PGdMItFSMChXOS0OLKkxdHXlcopnBkJPVuIwqEZAAj5CWSoMetFDq_y-dr3XkwMNSxBNoF1WrjZW26dE"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm mb-1 uppercase text-white tracking-wide italic">Julian Vance</h4>
+<p class="font-label-lg text-label-md text-gold mb-4 tracking-widest uppercase">Senior Manufacturing Engineer</p>
+<div class="flex gap-4">
+<a class="text-on-surface/50 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined text-lg">link</span></a>
+<a class="text-on-surface/50 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined text-lg">mail</span></a>
+</div>
+</div>
+<!-- Profile 2 -->
+<div class="reveal" style="transition-delay: 0.1s;">
+<div class="aspect-square mb-6 overflow-hidden bg-surface-container-high border border-gold-thin/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold/30 text-6xl">person</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm mb-1 uppercase text-white tracking-wide italic">Sarah Miller</h4>
+<p class="font-label-lg text-label-md text-gold mb-4 tracking-widest uppercase">Master Craftsman</p>
+</div>
+<!-- Profile 3 -->
+<div class="reveal" style="transition-delay: 0.2s;">
+<div class="aspect-square mb-6 overflow-hidden bg-surface-container-high border border-gold-thin/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold/30 text-6xl">person</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm mb-1 uppercase text-white tracking-wide italic">Robert Chen</h4>
+<p class="font-label-lg text-label-md text-gold mb-4 tracking-widest uppercase">Product Designer</p>
+</div>
+<!-- Profile 4 -->
+<div class="reveal" style="transition-delay: 0.3s;">
+<div class="aspect-square mb-6 overflow-hidden bg-surface-container-high border border-gold-thin/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold/30 text-6xl">person</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm mb-1 uppercase text-white tracking-wide italic">Elena Rossi</h4>
+<p class="font-label-lg text-label-md text-gold mb-4 tracking-widest uppercase">Project Director</p>
+</div>
+</div>
+</section>
+<!-- Clients Section -->
+<section class="py-24 border-y border-gold-thin/20 bg-surface-container-lowest" id="clients">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<span class="font-label-lg text-label-md text-gold mb-12 block tracking-[0.2em] uppercase">— Trusted By Our Clients</span>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-12 items-center opacity-40 reveal">
+<div class="flex flex-col items-center gap-4 group hover:opacity-100 hover:text-gold transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl">apartment</span>
+<span class="font-label-lg text-[11px] tracking-[0.3em] uppercase">METROPOLIS DEV</span>
+</div>
+<div class="flex flex-col items-center gap-4 group hover:opacity-100 hover:text-gold transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl">foundation</span>
+<span class="font-label-lg text-[11px] tracking-[0.3em] uppercase">OAK &amp; IRON</span>
+</div>
+<div class="flex flex-col items-center gap-4 group hover:opacity-100 hover:text-gold transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl">domain</span>
+<span class="font-label-lg text-[11px] tracking-[0.3em] uppercase">VERTEX BUILDERS</span>
+</div>
+<div class="flex flex-col items-center gap-4 group hover:opacity-100 hover:text-gold transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl">villa</span>
+<span class="font-label-lg text-[11px] tracking-[0.3em] uppercase">LUXE ESTATES</span>
+</div>
+<div class="flex flex-col items-center gap-4 group hover:opacity-100 hover:text-gold transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl">corporate_fare</span>
+<span class="font-label-lg text-[11px] tracking-[0.3em] uppercase">GLOBAL INTERIORS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-background" id="location">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="order-2 md:order-1 reveal">
+<div class="aspect-video w-full grayscale contrast-125 border border-gold-thin/30 overflow-hidden relative group">
+<img alt="Map Location" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQQQ42l7cYzVZ4uveQt_qbGXj5cQuP7siJW-NVIO8Ag7X1Sh3cyqMzBmKRDyk2k8yJg6kTRNRSrZf7ms61eiptg5zu3oAzuO0UUxF0VK8BKDFE1XBLS4VhUPpgKoYymqecyrYtDDUBTV1CbEeJO3XKQBAKXNHEKE4UguoaOjeOZuPqMgOpLaRKnqpzeLfQE8KIQoPV3nYWgvWZXtUc8RTNGqK4Xlr5YOaRSCrmH2UW_2oaky4K_9btSDPq49yYE3S7whkOwWyUM7TZ"/>
+<div class="absolute inset-0 bg-gold/5 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-gold text-5xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 md:pl-16 reveal" style="transition-delay: 0.2s;">
+<span class="font-label-lg text-label-md text-gold mb-6 block tracking-[0.2em] uppercase">— Where Craftsmanship Comes To Life</span>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase mb-10 text-white leading-none">Our Locations</h2>
+<div class="space-y-10">
+<div>
+<p class="font-label-lg text-label-md text-gold mb-3 tracking-widest uppercase">Headquarters</p>
+<p class="font-body-lg text-body-lg text-on-surface/80 italic leading-relaxed">824 Industrial Way, Suite 100<br/>Chicago, IL 60611, USA</p>
+</div>
+<div>
+<p class="font-label-lg text-label-md text-gold mb-3 tracking-widest uppercase">Contact</p>
+<p class="font-body-lg text-body-lg text-on-surface/80 italic leading-relaxed">T: +1 (312) 555-0192<br/>E: enquiries@interaindustries.com</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest text-on-surface py-24 border-t border-gold-thin/10" id="contact">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-20">
+<div class="md:col-span-4">
+<div class="flex items-center gap-4 mb-10">
+<img alt="INTERA" class="h-12 w-auto brightness-125 saturate-150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbMAAAQAElEQVR4AezVgXXjyg0FUDtlqJbUki5SRbpILalFbTh/13/Xa1sSRXJmMMDcnMgrieQAuND57x8v/keAAAECBA4ICJADaB4hQIAAgZcXAeJXQCBKQF0CyQUESPIFap8AAQJRAgIkSl5dAgQIJBdIHCDJ5bVPgACB5AICJPkCtU+AAIEoAQESJa8ugcQCWifwQ0CA/FDwIkCAAIHdAgJkN5kHCBAgQOCHgAD5oTD6pR4BAgQKCAiQAks0AgECBCIEBEiEupoECEQJqNtQQIA0xHQUAQIEVhIQICtt26wECBBoKCBAGmKucJQZCRAg8EtAgPyS8C8BAgQI7BIQILu43EyAAIEogfnqCpD5dqIjAgQIpBAQICnWpEkCBAjMJyBA5tuJjvoIOJUAgcYCAqQxqOMIECCwioAAWWXT5iRAgEBjgacDpHFdxxEgQIBAcgEBknyB2idAgECUgACJkleXwNMCbiQwp4AAmXMvuiJAgMD0AgJk+hVpkAABAnMKrBAgc8rrigABAskFBEjyBWqfAAECUQICJEpeXQIrCJixtIAAKb1ewxEgQKCfgADpZ+tkAgQIlBYQIFOvV3MECBCYV0CAzLsbnREgQGBqAQEy9Xo0R4BAlIC62wICZNvIHQQIECBwQ0CA3EDxFQECBAhsCwiQbSN3HBHwDAEC5QUESPkVG5AAAQJ9BARIH1enEiBAIEpgWF0BMoxaIQIECNQSECC19mkaAgQIDBMQIMOoFcoioE8CBJ4TECDPObmLAAECBL4ICJAvID4SIECAwHMC7QPkubruIkCAAIHkAgIk+QK1T4AAgSgBARIlry6B9gJOJDBUQIAM5VaMAAECdQQESJ1dmoQAAQJDBQTIH9zeEiBAgMDzAgLkeSt3EiBAgMAfAgLkDwxvCRCIElA3o4AAybg1PRMgQGACAQEywRK0QIAAgYwCAiTj1r737BsCBAgMFxAgw8kVJECAQA0BAVJjj6YgQCBKYOG6AmTh5RudAAECZwQEyBk9zxIgQGBhAQGy8PLnGF0XBAhkFRAgWTenbwIECAQLCJDgBShPgACBKIGzdQXIWUHPEyBAYFEBAbLo4o1NgACBswIC5Kyg59cVMDmBxQUEyOI/AOMTIEDgqIAAOSrnOQIECCwuEBggi8sbnwABAskFBEjyBWqfAAECUQICJEpeXQKBAkoTaCEgQDYUL5fLmxcDv4E1fwMb/3lY/rIAWf4nAIAAAQLHBATIETfPECBAgMCLAPEjIECAAIFDAgLkEJuHCBAIElB2IgEBMtEytEKAAIFMAgIk07b0SoAAgYkEBMhEyxjRihoECBBoJSBAWkk6hwABAosJCJDFFm5cAgSiBOrVFSD1dmoiAgQIDBEQIEOYFSFAgEA9AQFSb6dVJzIXAQKTCQiQyRaiHQIECGQRECBZNqVPAgQIRAncqStA7sD4mgABAgQeCwiQxz6nr16v19fMry2AzLPp/fpafb9b87l+TkCAnPPzNIEnBNxCoKaAAKm5V1MRIECgu4AA6U6sAAECBGoKZAiQmvKmIkCAQHIBAZJ8gdonQIBAlIAAiZJXl0AGAT0SeCAgQB7guESAAAEC9wUEyH0bVwgQIEDggYAAeYBz/pITCBAgUFdAgNTdrckIECDQVUCAdOV1OAECUQLq9hcQIP2NVSBAgEBJAQFScq2GIkCAQH8BAdLfOGcFXRMgQGBDQIBsALlMgAABArcFBMhtF98SIEAgSiBNXQGSZlUaJUCAwFwCAmSufeiGAAECaQQESJpVafRZAfcRIDBGQICMcVaFAAEC5QQESLmVGogAAQJjBL4HyJi6qhAgQIBAcgEBknyB2idAgECUgACJkleXwHcB3xBIJSBAUq1LswQIEJhHQIDMswudECBAIJVAqQBJJa9ZAgQIJBcQIMkXqH0CBAhECQiQKHl1CZQSMMyKAgJkxa2bmQABAg0EBEgDREcQIEBgRQEBMsfWdUGAAIF0AgIk3co0TIAAgTkEBMgce9AFAQJRAuoeFhAgh+k8SIAAgbUFBMja+zc9AQIEDgsIkMN0HnwX8JcAgVUFBMiqmzc3AQIETgoIkJOAHidAgECUQHRdARK9AfUJECCQVECAJF2ctgkQIBAtIECiN6B+nIDKBAicEhAgp/g8TIAAgXUFBMi6uzc5AQIETgmcCJBTdT1MgAABAskFBEjyBWqfAAECUQICJEpeXQInBDxKYAYBAdJ5C5fL5S3za4sn82x6v7xV3+/WfK6fExAg5/w8TYAAgWUF1gyQZddtcAIECLQTECDtLJ1EgACBpQQEyFLrNiyBcAENFBIQIIWWaRQCBAiMFBAgI7XVIkCAQCEBAZJsmdolQIDALAICpPMmrtfra+bXFk/m2fR+fa2+3635XD8nIEDO+XmaAIFlBAz6VUCAfBXxmQABAgSeEhAgTzG5iQABAgS+CgiQryI+9xJwLgECxQQESLGFGocAAQKjBATIKGl1CBAgECXQqa4A6QTrWAIECFQXECDVN2w+AgQIdBIQIJ1gHVtJwCwECNwSECC3VHxHgAABApsCAmSTyA0ECBAgcEtgRIDcqus7AgQIEEguIECSL1D7BAgQiBIQIFHy6hIYIaAGgY4CAqQjrqMJECBQWUCAVN6u2QgQINBRQIA8xHWRAAECBO4JCJB7Mr4nQIAAgYcCAuQhj4sECEQJqDu/gACZf0c6JECAwJQCAmTKtWiKAAEC8wsIkPl3dKxDTxEgQKCzgADpDOx4AgQIVBUQIFU3ay4CBKIElqkrQJZZtUEJECDQVkCAtPV0WieB//zrn28rvToxOpZAUwEB0pTTYS0EnEGAQA4BAZJjT7okQIDAdAICZLqVaIgAAQJRAvvqCpB9Xu4mQIAAgb8FBMjfEP4hQIAAgX0CAmSfl7sJPBJwjcBSAgJkqXUblgABAu0EBEg7SycRIEBgKYGpAmQpecMSIEAguYAASb5A7RMgQCBKQIBEyatLYCoBzRDYLyBA9pt5ggABAgT+EhAgfyH4PwECBAjsFxAg+81uPeE7AgQILCcgQJZbuYEJECDQRkCAtHF0CgECUQLqhgkIkDB6hQkQIJBbQIDk3p/uCRAgECYgQMLoZymsDwIECBwTECDH3DxFgACB5QUEyPI/AQAECEQJZK8rQLJvUP8ECBAIEhAgQfDKEiBAILuAAMm+wZX7NzsBAqECAiSUX3ECBAjkFRAgeXencwIECEQJ/KwrQH4y+EOAAAECewUEyF4x9xMgQIDATwEB8pPBHwJjBVQjUEFAgFTYohkIECAQICBAAtCVJECAQAWBnAFSQd4MBAgQSC4gQJIvUPsECBCIEhAgUfLqEsgpoGsCvwUEyG8KbwgQIEBgj4AA2aPlXgIECBD4LSBAflOMeaMKAQIEqggIkCqbNAcBAgQGCwiQweDKESAQJaBuawEB0lrUeQQIEFhEQIAssmhjEiBAoLWAAGktWvc8kxEgQOCTgAD5xOEDAQIECDwrIECelXIfAQIEogQmrStAJl2MtggQIDC7gACZfUP6I0CAwKQCAmTSxWirpYCzCBDoISBAeqg6kwABAgsICJAFlmxEAgQI9BB4JkB61HUmAQIECCQXECDJF6h9AgQIRAkIkCh5dQk8I+AeAhMLCJCJl6M1AgQIzCwgQGbejt4IECAwsUDxAJlYXmsECBBILiBAki9Q+wQIEIgSECBR8uoSKC5gvPoCAqT+jk1IgACBLgICpAurQwkQIFBfQIDMumN9fRL493//97rS69PwPhCYVECATLoYbREgQGB2AQEy+4b0R4DAaAH1nhQQIE9CuY0AAQIEPgsIkM8ePhEgQIDAkwIC5Ekotz0v4E4CBNYQECBr7NmUBAgQaC4gQJqTOpAAAQJRAmPrCpCx3qoRIECgjIAAKbNKgxAgQGCsgAAZ663a3AK6I0Bgh4AA2YHlVgIECBD4EBAgHxbeESBAgMAOgaYBsqOuWwkQIEAguYAASb5A7RMgQCBKQIBEyatLoKmAwwiMFxAg481VJECAQAkBAVJijYYgQIDAeAEB8m7uLwECBAjsFBAgO8HcToAAAQLvAgLk3cFfAgSiBNRNKyBA0q5O4wQIEIgVECCx/qoTIEAgrYAASbu6X437lwABAjECAiTGXVUCBAikFxAg6VdoAAIEogRWrytAOv8CLpfLW+bXFk/m2fR+eau+3635XD8nIEDO+XmaAAECywoIkGVXP8HgWiBAILWAAEm9Ps0TIEAgTkCAxNmrTIAAgSiBJnUFSBNGhxAgQGA9AQGy3s5NTIAAgSYCAqQJo0NWEzAvAQIvLwKk86/ger2+Zn5t8WSeTe/X1+r73ZrP9XMCAuScn6cJECCwrEBMgCzLbXACBAjUERAgdXZpEgIECAwVECBDuRUjEC6gAQLNBARIM0oHESBAYC0BAbLWvk1LgACBZgICZCel2wkQIEDgXUCAvDv4S4AAAQI7BQTITjC3EyAQJaDubAICZLaN6IcAAQJJBARIkkVpkwABArMJCJDZNtKvHycTIECgqYAAacrpMAIECKwjIEDW2bVJCRCIEihaV4AUXayxCBAg0FtAgPQWdj4BAgSKCgiQooutNZZpCBCYUUCAzLgVPREgQCCBgABJsCQtEiBAIErgUV0B8kjHNQIECBC4KyBA7tK4QIAAAQKPBATIIx3XCJwV8DyBwgICpPByjUaAAIGeAgKkp66zCRAgUFhg8gApLG80AgQIJBcQIMkXqH0CBAhECQiQKHl1CUwuoD0CWwICZEvIdQIECBC4KSBAbrL4kgABAgS2BATIltDR654jQIBAcQEBUnzBxiNAgEAvAQHSS9a5BAhECag7SECADIJWhgABAtUEBEi1jZqHAAECgwQEyCDoTGX0SoAAgWcEBMgzSu4hQIAAgW8CAuQbiS8IECAQJZCrrgDJtS/dEiBAYBoBATLNKjRCgACBXAICJNe+dPtYwFUCBAYKCJCB2EoRIECgkoAAqbRNsxAgQGCgwKcAGVhXKQIECBBILiBAki9Q+wQIEIgSECBR8uoS+CTgA4F8AgIk3850TIAAgSkEBMgUa9AEAQIE8glUCZBp5S+Xy1vm1xZs5tn0fnmrvt+t+Vw/JyBAzvl5mgABAssKCJBlV29wAo0EHLOsgABZdvUGJ0CAwDkBAXLOz9MECBBYVkCAhK9eAwQIEMgpIEBy7k3XBAgQCBcQIOEr0AABAlEC6p4TECDn/DxNgACBZQUEyLKrNzgBAgTOCQiQc35rP216AgSWFhAgS6/f8AQIEDguIECO23mSAAECUQJT1BUgU6xBEwQIEMgnIEDy7UzHBAgQmEJAgEyxBk2MFlCPAIHzAgJkw/B6vb56MfAbWPM3sPGfh+UvC5DlfwIACBAgcEzgWIAcq+UpAgQIECgkIEAKLdMoBAgQGCkgQEZqq0XgvIATCEwjIECmWYVGCBAgkEtAgOTal24JECAwjcByATKNvEYIECCQXECAtDCUdwAAAuxJREFUJF+g9gkQIBAlIECi5NUlsJyAgasJCJBqGzUPAQIEBgkIkEHQyhAgQKCagADJs1GdEiBAYCoBATLVOjRDgACBPAICJM+udEqAQJSAujcFBMhNFl8SIECAwJaAANkScp0AAQIEbgoIkJssvmwr4DQCBCoKCJCKWzUTAQIEBggIkAHIShAgQCBKoGddAdJT19kECBAoLCBACi/XaAQIEOgpIEB66jo7v4AJCBC4KyBA7tK4QIAAAQKPBATIIx3XCBAgQOCuQOcAuVvXBQIECBBILiBAki9Q+wQIEIgSECBR8uoS6CzgeAK9BQRIb2HnEyBAoKiAACm6WGMRIECgt4AAuSfsewIECBB4KCBAHvK4SIAAAQL3BATIPRnfEyAQJaBuEgEBkmRR2iRAgMBsAgJkto3ohwABAkkEBEiSRe1p070ECBAYISBARiirQYAAgYICAqTgUo1EgECUwFp1Bcha+zYtAQIEmgkIkGaUDiJAgMBaAgJkrX3PPq3+CBBIJCBAEi1LqwQIEJhJQIDMtA29ECBAIErgQF0BcgDNIwQIECDw8iJA/AoIECBA4JCAADnE5iECXwV8JrCegABZb+cmJkCAQBMBAdKE0SEECBBYT2CWAFlP3sQECBBILiBAki9Q+wQIEIgSECBR8uoSmEVAHwQOCgiQg3AeI0CAwOoCAmT1X4D5CRAgcFBAgByE+3jMOwIECKwpIEDW3LupCRAgcFpAgJwmdAABAlEC6sYKCJBYf9UJECCQVkCApF2dxgkQIBArIEBi/WOrq06AAIETAgLkBJ5HCRAgsLKAAFl5+2YnQCBKoERdAVJijYYgQIDAeAEBMt5cRQIECJQQECAl1rjeECYmQCBeQIDE70AHBAgQSCkgQFKuTdMECBCIEvioK0A+LLwjQIAAgR0CAmQHllsJECBA4ENAgHxYeEdghIAaBMoICJAyqzQIAQIExgoIkLHeqhEgQKCMQLoAKSNvEAIECCQX+D8AAAD//0lib+8AAAAGSURBVAMApgGz8zT8GV0AAAAASUVORK5CYII="/>
+<span class="font-headline-md text-headline-sm font-bold tracking-tighter uppercase text-gold italic">INTERA</span>
+</div>
+<p class="text-on-surface/60 font-body-md mb-10 max-w-xs italic leading-relaxed">
+                    Pioneering industrial luxury in cabinetry and door manufacturing for high-end architectural environments.
+                </p>
+<div class="flex gap-4">
+<a class="h-12 w-12 flex items-center justify-center border border-gold-thin/30 hover:border-gold text-gold transition-all" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="h-12 w-12 flex items-center justify-center border border-gold-thin/30 hover:border-gold text-gold transition-all" href="#"><span class="material-symbols-outlined text-lg">alternate_email</span></a>
+<a class="h-12 w-12 flex items-center justify-center border border-gold-thin/30 hover:border-gold text-gold transition-all" href="#"><span class="material-symbols-outlined text-lg">share</span></a>
+</div>
+</div>
+<div class="md:col-span-2 md:col-start-6">
+<p class="font-label-lg text-label-md text-gold mb-8 tracking-widest uppercase">NAVIGATION</p>
+<ul class="space-y-5 font-label-lg text-label-md text-on-surface/60 uppercase tracking-widest">
+<li><a class="hover:text-gold transition-colors" href="#">ABOUT</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">EXCELLENCE</a></li>
+<li><a class="hover:text-gold transition-colors" href="#products">PORTFOLIO</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">CAREERS</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<p class="font-label-lg text-label-md text-gold mb-8 tracking-widest uppercase">LEGAL</p>
+<ul class="space-y-5 font-label-lg text-label-md text-on-surface/60 uppercase tracking-widest">
+<li><a class="hover:text-gold transition-colors" href="#">PRIVACY POLICY</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">TERMS OF SERVICE</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">PRESS KIT</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">SITEMAP</a></li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<p class="font-label-lg text-label-md text-gold mb-8 tracking-widest uppercase">NEWSLETTER</p>
+<p class="text-on-surface/60 font-body-md mb-8 italic">Receive insights on industrial design and craft.</p>
+<div class="flex border-b border-gold-thin/30 focus-within:border-gold transition-all py-2">
+<input class="bg-transparent border-none focus:ring-0 w-full font-label-lg text-label-md text-white placeholder:text-on-surface/30 tracking-widest" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="text-gold hover:text-white transition-colors p-2"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<div class="pt-10 border-t border-gold-thin/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-label-lg text-[11px] text-on-surface/40 tracking-[0.3em] uppercase">
+                © 2024 INTERA INDUSTRIES. ENGINEERED DURABILITY. ALL RIGHTS RESERVED.
+            </p>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xs text-gold" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-lg text-[11px] text-on-surface/40 tracking-widest uppercase italic">SUSTAINABLY SOURCED MATERIALS</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Scroll Interactions
+    const nav = document.getElementById('main-nav');
+    const reveals = document.querySelectorAll('.reveal');
+
+    function handleScroll() {
+        // Navbar transition
+        if (window.scrollY > 50) {
+            nav.classList.add('glass-nav', 'border-gold-thin/20');
+            nav.classList.remove('border-transparent');
+        } else {
+            nav.classList.remove('glass-nav', 'border-gold-thin/20');
+            nav.classList.add('border-transparent');
+        }
+
+        // Reveal animations
+        const triggerBottom = window.innerHeight / 5 * 4;
+        reveals.forEach(reveal => {
+            const revealTop = reveal.getBoundingClientRect().top;
+            if (revealTop < triggerBottom) {
+                reveal.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    // Trigger initial check
+    handleScroll();
+</script>
+</body></html>
