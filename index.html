@@ -138,6 +138,12 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+        .text-gold {
+  color: #D4AF37;
+}
+.hover\:text-gold:hover {
+  color: #D4AF37;
+}
         .hero-zoom { animation: slowZoom 20s infinite alternate linear; }
         @keyframes slowZoom {
             from { transform: scale(1); }
@@ -206,13 +212,29 @@
 
 <div class="flex items-center gap-6">
 <a class="hidden md:block bg-gold text-on-primary-fixed font-label-lg text-label-md px-6 py-3 hover:bg-white transition-all duration-300 bold" href="#contact">GET IN TOUCH</a>
-<button class="md:hidden text-on-surface">
+<button id="menuBtn" class="md:hidden text-on-surface bg-gold -ml-2">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </div>
 </header>
+<div
+  id="mobileMenu"
+  class="hidden fixed top-20 left-0 w-full bg-[#121414] z-40 border-t border-gold-thin/20"
+>
+  <div class="flex flex-col py-6">
 
+    <a class="px-8 py-4 hover:text-gold" href="#about">ABOUT</a>
+    <a class="px-8 py-4 hover:text-gold" href="#excellence">EXCELLENCE</a>
+    <a class="px-8 py-4 hover:text-gold" href="#products-slider">DOORS</a>
+    <a class="px-8 py-4 hover:text-gold" href="intera-ai.html">INTERA-AI</a>
+    <a class="px-8 py-4 hover:text-gold" href="#clients">CLIENTS</a>
+    <a class="px-8 py-4 hover:text-gold" href="#team">OUR TEAM</a>
+    <a class="px-8 py-4 hover:text-gold" href="#location">LOCATION</a>
+    <a class="px-8 py-4 hover:text-gold" href="#contact">GET IN TOUCH</a>
+
+  </div>
+</div>
 <!-- Hero Section -->
 <section class="relative h-screen w-full overflow-hidden flex items-center justify-center">
 <!-- Gallery Slides -->
@@ -229,9 +251,9 @@
 </div>
 </div>
 <div class="relative z-20 text-center text-white px-margin-mobile max-w-4xl">
-<img alt="INTERA" class="h-60 -ml-10 w-140 object-contain brightness-125 saturate-150" src="logotransparent.png" width="4440px" height="11100px"/>
+<img alt="INTERA" class="h-40 -ml-10 w-140 object-contain brightness-125 saturate-150" src="logotransparent.png" width="4440px" height="11100px"/>
 
-<p class="font-headline-md text-headline-sm mb-8 text-gold reveal active" style="transition-delay: 0.2s;">An Era Of Grandeur</p>
+<p class="font-headline-md text-headline-sm mb-8 -ml-5 text-gold reveal active" style="transition-delay: 0.2s;">An Era Of Grandeur</p>
 <p class="font-body-lg text-body-md md:text-body-lg mb-12 text-on-surface/80 reveal active" style="transition-delay: 0.4s;">Precision-engineered doors and interior solutions crafted for modern architecture, luxury living, and global standards.</p>
 <div class="reveal active" style="transition-delay: 0.6s;">
 <a class="inline-flex items-center gap-3 border border-gold text-gold px-10 py-5 font-label-lg text-label-md hover:bg-gold hover:text-background transition-all duration-300 group" href="#about">
@@ -1079,6 +1101,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // duplicate logos for seamless infinite loop
   clientSlider.innerHTML += clientSlider.innerHTML;
+});
+        const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+document.querySelectorAll("#mobileMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
 });
 
 </script>
