@@ -5,11 +5,10 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>INTERA | Industrial Luxury Manufacturing</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-        <link href="https://fonts.googleapis.com/css2?family=+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",a
+            darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
@@ -77,7 +76,7 @@
                         "unit": "8px"
                     },
                     "fontFamily": {
-                        "headline-lg": ["Montserrat"],
+                        "headline-lg": ["Cormorant Garamond"],
                         "label-md": ["Montserrat"],
                         "headline-lg-mobile": ["Montserrat"],
                         "display-lg": ["Montserrat"],
@@ -103,7 +102,7 @@
         }
     </script>
 <style>
-    .contact-line {
+ .contact-line {
   width: 100%;
   background: transparent;
   border: none;
@@ -111,13 +110,16 @@
   padding: 0 0 12px;
   color: inherit;
   font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
-        .bg-background {
-  background-color: #121414;
+
+.contact-line:focus {
+  outline: none;
+  border-bottom-color: #D4AF37;
 }
-. {
-    font-family: " Garamond", serif;
-}
+
 .contact-line:focus {
   outline: none;
   border-bottom-color: #D4AF37;
@@ -143,12 +145,6 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-        .text-gold {
-  color: #D4AF37;
-}
-.hover\:text-gold:hover {
-  color: #D4AF37;
 }
         .hero-zoom { animation: slowZoom 20s infinite alternate linear; }
         @keyframes slowZoom {
@@ -207,11 +203,10 @@
 </div>
 <nav class="hidden md:flex items-center space-x-8">
 <a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#about">ABOUT</a>
-           <a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#clients">CLIENTS</a>
 <a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#excellence">EXCELLENCE</a>
-        <a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#excellence">WOOD SPECIES</a>
-<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#products-slider">PRODUCTS</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#products-slider">DOORS</a>
 <a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="intera-ai.html">INTERA-AI</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#clients">CLIENTS</a>
 <a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#team">OUR TEAM</a>
 <a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#location">LOCATIONS</a>
 
@@ -232,12 +227,10 @@
   <div class="flex flex-col py-6">
 
     <a class="px-8 py-4 hover:text-gold" href="#about">ABOUT</a>
-          <a class="px-8 py-4 hover:text-gold" href="#clients">CLIENTS</a>
-          <a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors" href="#excellence">WOOD SPECIES</a>
     <a class="px-8 py-4 hover:text-gold" href="#excellence">EXCELLENCE</a>
-    <a class="px-8 py-4 hover:text-gold" href="#products-slider">PRODUCTS</a>
+    <a class="px-8 py-4 hover:text-gold" href="#products-slider">DOORS</a>
     <a class="px-8 py-4 hover:text-gold" href="intera-ai.html">INTERA-AI</a>
-    
+    <a class="px-8 py-4 hover:text-gold" href="#clients">CLIENTS</a>
     <a class="px-8 py-4 hover:text-gold" href="#team">OUR TEAM</a>
     <a class="px-8 py-4 hover:text-gold" href="#location">LOCATION</a>
     <a class="px-8 py-4 hover:text-gold" href="#contact">GET IN TOUCH</a>
@@ -260,9 +253,9 @@
 </div>
 </div>
 <div class="relative z-20 text-center text-white px-margin-mobile max-w-4xl">
-<img alt="INTERA" class="h-40 -ml-15 w-140 object-contain brightness-125 saturate-150" src="logotransparent.png" width="4440px" height="11100px"/>
+<img alt="INTERA" class="h-40 -ml-10 w-140 object-contain brightness-125 saturate-150" src="logotransparent.png" width="4440px" height="11100px"/>
 
-<p class="font-headline-md  text-headline-sm mb-8 ml-9 text-gold reveal active" style="transition-delay: 0.2s;">An Era Of Grandeur</p>
+<p class="font-headline-md text-headline-sm mb-8 text-gold reveal -ml-5 active" style="transition-delay: 0.2s;">An Era Of Grandeur</p>
 <p class="font-body-lg text-body-md md:text-body-lg mb-12 text-on-surface/80 reveal active" style="transition-delay: 0.4s;">Precision-engineered doors and interior solutions crafted for modern architecture, luxury living, and global standards.</p>
 <div class="reveal active" style="transition-delay: 0.6s;">
 <a class="inline-flex items-center gap-3 border border-gold text-gold px-10 py-5 font-label-lg text-label-md hover:bg-gold hover:text-background transition-all duration-300 group" href="#about">
@@ -280,7 +273,7 @@
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
 <div class="md:col-span-5 reveal">
 <span class="font-label-lg text-label-md text-gold mb-6 block">— CRAFTING SPACES WITH PRECISION</span>
-<h2 class="font-headline-lg  text-headline-sm md:text-headline-lg mb-8 uppercase text-white">About Intera</h2>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg mb-8 uppercase text-white">About Intera</h2>
 <p class="font-body-lg text-body-lg text-on-surface/70 mb-8 leading-relaxed">
                 At Intera Industries, we redefine modern architectural living through precision-engineered doors and interior solutions. <br/>Combining advanced German manufacturing technology with refined craftsmanship, we create products that deliver durability, elegance, and consistency at scale.<br/>
 
@@ -300,7 +293,7 @@
 <img alt="Master craftsman" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uh3pQYQg8M6IDQMLBeK-CG_k_Hpj9k1AlUfbojAm6oyAzvfowP0hFBqV30bpmry2aTFoeMvwmMj70jzqOE5f-u391u_yCLnQEYh6iuhCdbNo7sXXG6EX25IoNBda44u74_Dtbc_E_ECYAYyp-dFowoyZ3Q76WqTXZTU07koo4XaATKMwU3rbEWKXr4bkDEzQWvyiKwaQNdH7gQ21BdlAZZoegNU-aZcBaIRZQKVZvqQeq6-bkic35zPrss"/>
 <div class="absolute bottom-0 left-0 bg-gold text-background p-8 max-w-xs">
 <p class="font-label-lg text-label-md mb-2">FACTORY FLOOR</p>
-<p class="font-body-md">Our 1,00,000 sq. ft. facility combines digital precision with hand-finished excellence.</p>
+<p class="font-body-md">Our 50,000 sq. ft. facility combines digital precision with hand-finished excellence.</p>
 </div>
 </div>
 </div>
@@ -318,7 +311,7 @@
         — Trusted Across Industries
       </span>
 
-      <h2 class="font-headline-lg  text-headline-sm md:text-headline-lg uppercase text-white mb-6">
+      <h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white mb-6">
         Our Valued Clients
       </h2>
 
@@ -414,35 +407,34 @@
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="mb-16 reveal">
 <span class="font-label-lg text-label-md text-gold mb-4 block">— EXCELLENCE IN EVERY DETAIL</span>
-<h2 class="font-headline-lg  text-headline-sm md:text-headline-lg uppercase text-white">The Intera Standard</h2>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white">The Intera Standard</h2>
 </div>
 <div class="grid-cols-1 gap-4 reveal flex flex-col md:flex-row md:items-stretch md:h-[600px]">
 <!-- Card 1 -->
-        <div class="group relative overflow-hidden bg-surface-dim border border-gold-thin/30 hover:border-gold transition-all duration-500 hover:-translate-y-2 flex-1 ease-in-out md:hover:flex-[2.5] min-h-[700px] md:min-h-0" style="transition-delay: 0.1s;">
-<img alt="Premium Materials" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://i.pinimg.com/webp85/1200x/d9/3f/8d/d93f8d8b22cb66117a2faa96c74c46c2.webp"/>
-<div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 right-0 p-8">
-<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-2">UV Paint Technology</h3>
-<p class="text-on-surface/70 text-sm opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Every Intera door is finished using advanced UV coating systems that deliver exceptional surface uniformity, durability, and lasting visual appeal.</p>
-</div>
-</div>
 <div class="group relative overflow-hidden bg-surface-dim border border-gold-thin/30 hover:border-gold transition-all duration-500 hover:-translate-y-2 flex-1 ease-in-out md:hover:flex-[2.5] min-h-[400px] md:min-h-0">
 <img alt="Precision Engineering" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uh3pQYQg8M6IDQMLBeK-CG_k_Hpj9k1AlUfbojAm6oyAzvfowP0hFBqV30bpmry2aTFoeMvwmMj70jzqOE5f-u391u_yCLnQEYh6iuhCdbNo7sXXG6EX25IoNBda44u74_Dtbc_E_ECYAYyp-dFowoyZ3Q76WqTXZTU07koo4XaATKMwU3rbEWKXr4bkDEzQWvyiKwaQNdH7gQ21BdlAZZoegNU-aZcBaIRZQKVZvqQeq6-bkic35zPrss"/>
 <div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
 <div class="absolute bottom-0 left-0 right-0 p-8">
 <h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-2">Consistent Quality</h3>
-<p class="text-on-surface/70 text-sm opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Every product undergoes strict quality checks to ensure flawless finishing and long-term durability.</p>
+<p class="text-on-surface/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Every product undergoes strict quality checks to ensure flawless finishing and long-term durability.</p>
 </div>
 </div>
 <!-- Card 2 -->
-
+<div class="group relative overflow-hidden bg-surface-dim border border-gold-thin/30 hover:border-gold transition-all duration-500 hover:-translate-y-2 flex-1 ease-in-out md:hover:flex-[2.5] min-h-[700px] md:min-h-0" style="transition-delay: 0.1s;">
+<img alt="Premium Materials" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://i.pinimg.com/webp85/1200x/d9/3f/8d/d93f8d8b22cb66117a2faa96c74c46c2.webp"/>
+<div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-2">Large Projects</h3>
+<p class="text-on-surface/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Designed to execute high-volume residential and commercial projects with precision and timely delivery.</p>
+</div>
+</div>
 <!-- Card 3 -->
 <div class="group relative overflow-hidden bg-surface-dim border border-gold-thin/30 hover:border-gold transition-all duration-500 hover:-translate-y-2 flex-1 ease-in-out md:hover:flex-[2.5] min-h-[400px] md:min-h-0" style="transition-delay: 0.2s;">
 <img alt="Modern Machinery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://i.pinimg.com/webp85/736x/81/9a/39/819a39fd22bf754edf0326126d8cb2ce.webp"/>
 <div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
 <div class="absolute bottom-0 left-0 right-0 p-8">
 <h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-2">Design Excellence</h3>
-<p class="text-on-surface/70 text-sm opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Modern designs, premium finishes, and engineered performance tailored for luxury spaces.</p>
+<p class="text-on-surface/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Modern designs, premium finishes, and engineered performance tailored for luxury spaces.</p>
 </div>
 </div>
 <!-- Card 4 -->
@@ -451,7 +443,7 @@
 <div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
 <div class="absolute bottom-0 left-0 right-0 p-8">
 <h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-2">Global Standards</h3>
-<p class="text-on-surface/70 text-sm opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">
+<p class="text-on-surface/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300 line-clamp-3">
   Manufactured to meet evolving international expectations in quality, finish, and performance.
 </p>
 </div>
@@ -462,7 +454,7 @@
 <div class="absolute inset-0 gold-overlay opacity-80 group-hover:opacity-90 transition-opacity"></div>
 <div class="absolute bottom-0 left-0 right-0 p-8">
 <h3 class="font-headline-sm text-headline-sm text-gold uppercase mb-2">Precision Built</h3>
-<p class="text-on-surface/70 text-sm opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Powered by world-class German machinery and precision-engineered production systems.</p>
+<p class="text-on-surface/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">Powered by world-class German machinery and precision-engineered production systems.</p>
 </div>
 </div>
 </div>
@@ -477,7 +469,7 @@
         — Superior Selection
       </span>
 
-      <h2 class="font-headline-lg  text-headline-sm md:text-headline-lg uppercase text-white mb-6 leading-none">
+      <h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white mb-6 leading-none">
         Wood Species
       </h2>
 
@@ -486,11 +478,12 @@
       </p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 items-start">
+    <!-- 2 × 2 GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
 
       <!-- Teak -->
-      <div class="reveal group flex flex-col h-full">
-        <div class="h-[340px] overflow-hidden border border-white/20 mb-6">
+      <div class="reveal group flex flex-col">
+        <div class="h-[320px] overflow-hidden border border-white/20 mb-6">
           <img
             src="https://lh3.googleusercontent.com/aida/ADBb0uh2Wv7sPEyEi_KnSY9SJuh-WF44r-INUIpi1vYG0vBdhf2qvL-yQJqvqOk6-YXVw6fzM7FD3or3FE8kdSDFH7yUW1eh0ncWh-FLHDxGsJOQ_-O3tJFkEMyte2BnijaD5wSQDI9LeFeiuk6eU-E0ADmHMELXfi-tvDe_1rzWU5hDXbzo2dwI0ZXjVnox_2nFJJR_ZB6Wsb5EFAKJ0HHRLsScH6Q69BOYLBd56aZeGNuwWKfOelOOnlaTT2g"
             alt="Teak Wood"
@@ -498,18 +491,18 @@
           >
         </div>
 
-        <h4 class="text-white  text-3xl mb-4 min-h-[60px]">
+        <h4 class="text-white text-3xl mb-4">
           Teak
         </h4>
 
-        <p class="text-on-surface/60 italic leading-relaxed min-h-[130px]">
+        <p class="text-on-surface/60 italic leading-relaxed">
           Known for its durability, elegance, and timeless luxury appeal.
         </p>
       </div>
 
       <!-- Meranti -->
-      <div class="reveal group flex flex-col h-full" style="transition-delay:0.1s;">
-        <div class="h-[340px] overflow-hidden border border-white/20 mb-6">
+      <div class="reveal group flex flex-col" style="transition-delay:0.1s;">
+        <div class="h-[320px] overflow-hidden border border-white/20 mb-6">
           <img
             src="https://lh3.googleusercontent.com/aida/ADBb0uhrSMc_TjGDkdqZyEGvSfq1hR-ZkwA1AOtKZd1tfCh5O3POkH4RiGk0KuzNkAbwwFlveJguYTlJE7fKszjAQRWD5dXcgbgks0xsKKStptYuEWaT6VLMiQJ3YMLN9KAJeROV6nxx4k_iFI496IrJUdV4-Ru_VIhpz7sBZZjsaV32Plt0biEVphXZX_68VrTnBKb4hzUZnsxCav48zgQbI2vkrKjpOUB9pTwghe-TEPrWtTlptOnJrIkUd_FK"
             alt="Meranti Wood"
@@ -517,18 +510,18 @@
           >
         </div>
 
-        <h4 class="text-white  text-3xl mb-4 min-h-[60px]">
+        <h4 class="text-white text-3xl mb-4">
           Meranti
         </h4>
 
-        <p class="text-on-surface/60 italic leading-relaxed min-h-[130px]">
+        <p class="text-on-surface/60 italic leading-relaxed">
           A versatile hardwood offering stability, consistency, and refined finishing.
         </p>
       </div>
 
       <!-- Pine -->
-      <div class="reveal group flex flex-col h-full" style="transition-delay:0.2s;">
-        <div class="h-[340px] overflow-hidden border border-white/20 mb-6">
+      <div class="reveal group flex flex-col" style="transition-delay:0.2s;">
+        <div class="h-[320px] overflow-hidden border border-white/20 mb-6">
           <img
             src="https://i.pinimg.com/736x/7a/5d/64/7a5d641743de110d462185cb7e2440a7.jpg"
             alt="Pine Wood"
@@ -536,33 +529,36 @@
           >
         </div>
 
-        <h4 class="text-white  text-3xl mb-4 min-h-[60px]">
+        <h4 class="text-white text-3xl mb-4">
           Pine
         </h4>
 
-        <p class="text-on-surface/60 italic leading-relaxed min-h-[130px]">
+        <p class="text-on-surface/60 italic leading-relaxed">
           Lightweight and adaptable wood species ideal for modern applications.
         </p>
       </div>
 
       <!-- LVL -->
-      <div class="reveal group flex flex-col h-full" style="transition-delay:0.3s;">
-        <div class="h-[340px] overflow-hidden border border-white/20 mb-6">
+      <div class="reveal group flex flex-col" style="transition-delay:0.3s;">
+        <div class="h-[320px] overflow-hidden border border-white/20 mb-6">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwDuxM74lVKs0hjdRrzgXiPIXdFY-RdOnKUQ&s"
-            alt="LVL for engineered wood"
+            alt="LVL Engineered Wood"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           >
         </div>
 
-        <h4 class="text-white  text-3xl mb-4 min-h-[60px]">
-          Laminated Veneer Lumbar
+        <h4 class="text-white text-3xl mb-4">
+          Laminated Veneer Lumber (LVL)
         </h4>
 
-        <p class="text-on-surface/60 italic leading-relaxed min-h-[130px]">
-          Naturally resistant to moisture and known for its clean grain patterns.
+        <p class="text-on-surface/60 italic leading-relaxed">
+          Engineered wood product offering exceptional dimensional stability,
+          strength, and consistency for precision door manufacturing.
         </p>
       </div>
+
+    </div>
 
   </div>
 </section>
@@ -571,7 +567,7 @@
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="mb-16 reveal">
 <span class="font-label-lg text-label-md text-gold mb-4 block tracking-[0.2em] uppercase">— Our Signature Collections</span>
-<h2 class="font-headline-lg  text-headline-sm md:text-headline-lg uppercase text-white mb-6 leading-none">Premium Door Solutions</h2>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white mb-6 leading-none">Premium Door Solutions</h2>
 <p class="font-body-lg text-body-lg text-on-surface/70 max-w-2xl italic">
             Discover our curated range of luxury door solutions, engineered with industrial precision and finished with artistic mastery. From the natural warmth of real wood to modern high-performance finishes.
         </p>
@@ -659,9 +655,9 @@
   <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 
     <!-- Heading -->
-    <div class="mb-20 reveal">
+    <div class="mb-20 reveal mt-15">
       
-
+<span class="font-label-lg text-label-md text-gold mb-4 block tracking-[0.2em] uppercase">— Our Signature Collections</span>
     <h2 class="font-headline-lg  text-headline-sm md:text-headline-lg uppercase text-white mb-6 leading-none">Premium Cabinetry</h2>
 <p class="font-body-lg text-body-lg text-on-surface/70 max-w-2xl italic">
             Thoughtfully designed kitchens, wardrobes, and workstations crafted with precision engineering and timeless aesthetics.
@@ -686,7 +682,7 @@
           01
         </span>
 
-        <h3 class=" text-5xl italic text-white mb-4">
+        <h3 class=" text-5xl cormorant text-white mb-4">
           Kitchens
         </h3>
 
@@ -711,7 +707,7 @@
           02
         </span>
 
-        <h3 class=" text-5xl italic text-white mb-4">
+        <h3 class=" text-5xl cormorant text-white mb-4">
           Wardrobes
         </h3>
 
@@ -736,7 +732,7 @@
           03
         </span>
 
-        <h3 class=" text-5xl italic text-white mb-4">
+        <h3 class=" text-5xl cormorant text-white mb-4">
           Workstations
         </h3>
 
@@ -756,7 +752,7 @@
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="mb-16 reveal">
 <span class="font-label-lg text-label-md text-gold mb-4 block tracking-[0.2em] uppercase">— Industrial Methodology</span>
-<h2 class="font-headline-lg  text-headline-sm md:text-headline-lg uppercase text-white leading-none">Our Process</h2>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white leading-none">Our Process</h2>
 <p class="font-body-lg text-body-lg text-on-surface/70 max-w-2xl italic"><br/>
     Precision engineered manufacturing workflow ensuring quality, durability and consistency at every stage.
   </p>
@@ -805,7 +801,7 @@
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
 <div class="max-w-2xl">
 <span class="font-label-lg text-label-md text-gold mb-4 block tracking-[0.2em] uppercase">— People Behind The Craft</span>
-<h2 class="font-headline-lg  text-headline-sm md:text-headline-lg uppercase text-white mb-6 leading-none">Expertise Meets Passion</h2>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white mb-6 leading-none">Expertise Meets Passion</h2>
 <p class="font-body-lg text-body-lg text-on-surface/70 italic">Our team consists of lifelong woodworkers, advanced manufacturing engineers, and project managers dedicated to excellence.</p>
 </div>
 </div>
@@ -848,7 +844,6 @@
 </div>
 </div>
 </section>
-
 <section
   id="location"
   class="py-24 bg-background border-t border-gold-thin/20"
@@ -861,7 +856,7 @@
         — WHERE WE OPERATE
       </span>
 
-      <h2 class="font-headline-lg  text-headline-sm md:text-headline-lg uppercase text-white mb-6">
+      <h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white mb-6">
         Our Locations
       </h2>
 
@@ -1030,7 +1025,7 @@
           — Connect With Us
         </span>
 
-        <h2 class="font-headline-lg  text-headline-sm md:text-headline-lg text-white leading-tight mb-8">
+        <h2 class="font-headline-lg text-headline-sm md:text-headline-lg text-white leading-tight mb-8">
           Start a Conversation<br>
          
         </h2>
@@ -1098,7 +1093,7 @@
       <!-- RIGHT SIDE -->
       <div class="reveal" style="transition-delay:0.2s">
 
-        <form id="contactForm" class="space-y-12">
+        <form class="space-y-12">
 
           <!-- Full Name -->
           <div>
@@ -1108,8 +1103,6 @@
 
            <textarea
               rows="3"
-                   id="name"
-                   required
               class="contact-line resize-none"
             ></textarea>
           </div>
@@ -1120,12 +1113,12 @@
               Email Address
             </label>
 
-            <textarea
-              rows="3"
-                    id="email"
-                    required
-              class="contact-line resize-none"
-            ></textarea>
+            <input
+  type="email"
+  id="email"
+  required
+  class="contact-line"
+/>
           </div>
 
           <!-- Phone -->
@@ -1136,8 +1129,6 @@
 
             <textarea
               rows="3"
-                    id="phone"
-                    required
               class="contact-line resize-none"
             ></textarea>
           </div>
@@ -1150,8 +1141,6 @@
 
             <textarea
               rows="2"
-                    id="message"
-                    required
               class="contact-line resize-none"
             ></textarea>
           </div>
@@ -1317,7 +1306,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // duplicate logos for seamless infinite loop
   clientSlider.innerHTML += clientSlider.innerHTML;
 });
-        const menuBtn = document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
 menuBtn.addEventListener("click", () => {
@@ -1329,51 +1318,5 @@ document.querySelectorAll("#mobileMenu a").forEach(link => {
     mobileMenu.classList.add("hidden");
   });
 });
-  
-
-const form = document.getElementById("contactForm");
-
-form.addEventListener("submit", async (e) => {
-
-  e.preventDefault();
-
-  const formData = new FormData();
-
-  formData.append("name", document.getElementById("name").value);
-  formData.append("email", document.getElementById("email").value);
-  formData.append("phone", document.getElementById("phone").value);
-  formData.append("message", document.getElementById("message").value);
-
-  try {
-
-    await fetch(
-      "https://script.google.com/macros/s/AKfycbwPr8orSj6Tk7bGEngPu_LCljRyTRhR_YzOmqJgs12z9yGQwokWmEEcDwuHOGR2_7s_/exec",
-      {
-        method: "POST",
-        mode: "no-cors",
-        body: formData
-      }
-    );
-
-    alert(
-      "Thank you for contacting Intera Industries. We will get back to you shortly."
-    );
-
-    form.reset();
-
-  } catch (error) {
-
-    console.error("Submission Error:", error);
-
-    alert(
-      "Unable to submit inquiry. Please try again later."
-    );
-
-  }
-
-});
-
-
-
 </script>
 </body></html>
