@@ -1,0 +1,568 @@
+<!-- Intera Industries - Products & Collections -->
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products &amp; Collections | INTERA Industries</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#e2e2e2",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "inverse-surface": "#e2e2e2",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "secondary": "#c8c6c5",
+                        "surface": "#121414",
+                        "on-primary-fixed": "#241a00",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-tint": "#e9c349",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#e9c349",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-surface": "#e2e2e2",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-variant": "#333535",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-high": "#282a2b",
+                        "surface-bright": "#38393a",
+                        "on-primary": "#3c2f00",
+                        "surface-container-low": "#1a1c1c",
+                        "primary-container": "#d4af37",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-tertiary-container": "#454545",
+                        "inverse-on-surface": "#2f3131",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-primary-container": "#554300",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#474746",
+                        "primary": "#f2ca50",
+                        "on-secondary-container": "#b7b5b4",
+                        "primary-fixed": "#ffe088",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-secondary": "#303030",
+                        "inverse-primary": "#735c00",
+                        "tertiary": "#d0cdcd",
+                        "on-tertiary": "#303030",
+                        "tertiary-container": "#b4b2b2",
+                        "background": "#121414",
+                        "surface-container-lowest": "#0c0f0f",
+                        "on-error": "#690005",
+                        "outline": "#99907c",
+                        "surface-container-highest": "#333535",
+                        "outline-variant": "#4d4635",
+                        "surface-container": "#1e2020",
+                        "surface-dim": "#121414",
+                        "gold": "#D4AF37"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "margin-tablet": "32px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Cormorant Garamond", "serif"],
+                        "label-md": ["Cormorant Garamond", "serif"],
+                        "headline-lg-mobile": ["Cormorant Garamond", "serif"],
+                        "display-lg": ["Cormorant Garamond", "serif"],
+                        "headline-md": ["Cormorant Garamond", "serif"],
+                        "headline-sm": ["Cormorant Garamond", "serif"],
+                        "body-md": ["Cormorant Garamond", "serif"],
+                        "label-lg": ["Cormorant Garamond", "serif"],
+                        "body-lg": ["Cormorant Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "display-lg": ["72px", {"lineHeight": "1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["38px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-sm": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-lg": ["16px", {"lineHeight": "1.2", "letterSpacing": "0.12em", "fontWeight": "700"}],
+                        "body-lg": ["22px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal { opacity: 1; transform: translateY(0); } /* Always visible on subpage for immediate impact */
+        
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(18, 20, 20, 0.95);
+        }
+
+        .border-gold-thin { border-color: rgba(212, 175, 55, 0.2); }
+        
+        .gold-overlay {
+            background: linear-gradient(to top, rgba(18, 20, 20, 0.95) 0%, rgba(18, 20, 20, 0.4) 50%, transparent 100%);
+        }
+        #doorSliderInner {
+  /* gap-8 is 32px, so we add a padding-right equal to the gap 
+     to ensure the looped element doesn't snap abruptly */
+  padding-right: 32px; 
+  animation: doorMarquee 35s linear infinite;
+}
+
+/* Pause the scrolling animation when a user hovers to read */
+#doorSliderInner:hover {
+  animation-play-state: paused;
+}
+
+@keyframes doorMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Moves exactly halfway through the combined width (Original + Clone) */
+    transform: translateX(-50%);
+  }
+}
+
+        .gold-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+        .gold-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .gold-scrollbar::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-gold selection:text-surface-container-lowest overflow-x-hidden">
+<!-- Top Navigation -->
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 transition-all duration-500 border-b border-transparent" id="main-nav">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col items-start">
+  <img
+    alt="INTERA"
+    src="logotransparent.png"
+    class="-ml-5 h-12 w-auto object-contain brightness-125"
+  />
+
+
+</div>
+<nav class="hidden md:flex items-center space-x-10">
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors tracking-widest bold" href="index.html#about">ABOUT</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors tracking-widest" href="index.html#excellence">EXCELLENCE</a>
+
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors tracking-widest" href="process.html">PROCESS</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors tracking-widest" href="products.html">PRODUCTS</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors tracking-widest" href="intera-ai.html">INTERA.AI</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors tracking-widest" href="index.html#team">OUR TEAM</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors tracking-widest" href="index.html#clients">CLIENTS</a>
+<a class="text-on-surface/120 font-label-lg text-label-md hover:text-gold transition-colors tracking-widest" href="index.html#location">LOCATION</a>
+</nav>
+<div class="flex items-center gap-6">
+<a class="ml-5 hidden md:block bg-gold text-on-primary-fixed text-sm font-medium px-6 py-3 whitespace-nowrap hover:bg-white hover:text-black transition-all duration-300 tracking-wider" href="#contact">
+  GET IN TOUCH
+</a>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Page Header -->
+<section class="py-24 bg-surface-container-low border-b border-gold-thin/10">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<span class="font-label-lg text-label-md text-gold mb-6 block tracking-[0.2em] uppercase">— Master Collections</span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg uppercase mb-8 leading-none">Products &amp; Collections</h1>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface/60 max-w-2xl mx-auto italic">
+                A curated portfolio of architectural door systems and bespoke cabinetry, engineered for the most discerning residential and commercial projects.
+            </p>
+</div>
+</section>
+<!-- Products Section -->
+<section class="py-24 bg-background">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header -->
+<div class="max-w-3xl mb-20 reveal">
+<span class="font-label-lg text-label-md text-gold mb-6 block tracking-[0.2em] uppercase">— Architectural Entryways</span>
+<h2 class="font-headline-lg text-headline-sm md:text-headline-lg uppercase text-white mb-8 leading-none">Premium Door Solutions</h2>
+<p class="font-body-lg text-body-lg text-on-surface/70 italic leading-relaxed">
+                    Elevating luxury spaces through masterfully engineered doors that combine timeless aesthetic appeal with industrial-grade durability. Designed for those who demand uncompromising quality in every architectural detail.
+                </p>
+</div>
+<!-- Door Categories (Horizontal Scroll) -->
+<div class="mb-24 reveal">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline-sm text-2xl text-white uppercase tracking-widest">Door Categories</h3>
+</div>
+<div class="w-full overflow-hidden" id="door-slider">
+  <div class="flex gap-8 pb-10" id="doorSliderInner">
+<!-- Veneer Doors -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group">
+<div class="aspect-[3/4] overflow-hidden border border-gold-thin/30 mb-6">
+<img alt="Veneer Doors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPky0jfaKQ5hU_bAcZuJCF0VbHyWIFotDQg_d-X4d0qy8IG98NJ4AEWro7UVF7yLV6TyCcs6ZqKQlqoYIm9v6zMOzAySFNoVDl8xoyvRVffXt-ULKLF5DZDns-5uVtXZqwmA4rX8LIy8_T-TxbiFTv4PMBFHPpaadRsP_PLDtv4hexY0rxbArinQDyQggm9GSSrvJg3Qq1ESfRyhk4c27TLKING0SDNV_TjJvvSIR9iSabhYWPyFnYD1E3BNsczRiqTw2dVHtWYtkY"/>
+</div>
+<h4 class="font-headline-sm text-xl text-gold uppercase mb-3 tracking-wide">Veneer Doors</h4>
+<p class="text-on-surface/120 font-body-md italic leading-relaxed">Crafted using premium natural wood veneers, offering the authentic beauty of natural wood with enhanced structural stability.</p>
+</div>
+<!-- Laminate Doors -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group">
+<div class="aspect-[3/4] overflow-hidden border border-gold-thin/30 mb-6">
+<img alt="Laminate Doors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCzaJR8TSRmCfNrNDybqlR4JV0qjvbqMlvOyJJpphHvxhV2nAX-jHGzFCJfSTfnS4cmV7tLMfGv-eR10FEjASxSJtiwLDSa_kf30GTQI1KlUtaRMd2HR0L71E1zNajX-Onkgkh2o2nTw8EGNvJuT54nFkvxjL0cnTtz6IXGZzggSLFA49O8Ol6Kwxij_VsRM8DQlbncl_XzddFWF4gYa43BBJqEv3yR8ZwM1GhXemUiv23M7gLy9B85bVQ9HHAnFFIbSWSz8vTL4xo"/>
+</div>
+<h4 class="font-headline-sm text-xl text-gold uppercase mb-3 tracking-wide">Laminate Doors</h4>
+<p class="text-on-surface/120 font-body-md italic leading-relaxed">Engineered for durability, consistency, and modern aesthetics, these doors offer exceptional resistance to wear and moisture.</p>
+</div>
+<!-- Solid Wood Doors -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group">
+<div class="aspect-[3/4] overflow-hidden border border-gold-thin/30 mb-6">
+<img alt="Solid Wood Doors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4I06A3pFJILWYimQn9JJ2Lu7yXHR2ViH8oynjRCwDqpjNNoDU3qeKqiWy-2Zn85eWc97Z4CbX10yhWwztmEmU6ArPcOeAzqPebI6-ZBtw_YJk3oksIL4TEV4eq0BwUKygu-tugXDPsq_tFdlV3hJViirfSs4eOI5HZyTK0PTNHosp8XbFE5DYWTnCuP7EysyfyvN7qK_ZZFkxn-NRvNsXXaDxBDX_MI3QJ9DeMgF641Z0UPNKveFqzeoiU_tAozKTbODPCDD0iUxx"/>
+</div>
+<h4 class="font-headline-sm text-xl text-gold uppercase mb-3 tracking-wide">Solid Wood Doors</h4>
+<p class="text-on-surface/120 font-[24px] italic leading-relaxed">Manufactured using carefully selected hardwood species, representing the pinnacle of traditional craftsmanship and structural integrity.</p>
+</div>
+<!-- PU Painted Doors -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group">
+<div class="aspect-[3/4] overflow-hidden border border-gold-thin/30 mb-6">
+<img alt="PU Painted Doors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvq6J0M4fg0B1ii1GOA656MxnlEY3rQbkELh5Tp_2gydr3xbnO_hqQhN1R0136rfeURxmjBUBNkHXzQVEblOsAlCTcDOj3CFwAMrCoRdT0PBjkE8UqXPJlv_7mHrZJbo8BDjLGmJqR1j3GSoTXIWa2wrl6e1a6QTN0ehbsZ42i2iSqjD1z7cX3qiuIiZSukTUyqYVcte2NJLbbOBisW6pVHjZuQUzlArwNDCwBcJBPSx6Xf2qBSp9GerGtU_ACZnKyLY5K5XSh4B87"/>
+</div>
+<h4 class="font-headline-sm text-xl text-gold uppercase mb-3 tracking-wide">PU Painted Doors</h4>
+<p class="text-on-surface/120 font-body-md italic leading-relaxed">Premium polyurethane painted doors with ultra-smooth finishes, available in a sophisticated palette of matte and gloss textures.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Cabinet Section -->
+<section class="py-24 bg-background" id="cabinets">
+
+  <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+
+    <!-- Heading -->
+    <div class="mb-20 reveal mt-15">
+      
+<span class="font-label-lg text-label-md text-gold mb-4 block tracking-[0.2em] uppercase">— Our Signature Collections</span>
+    <h2 class="font-headline-lg  text-headline-sm md:text-headline-lg uppercase text-white mb-6 leading-none">Premium Cabinetry</h2>
+<p class="font-body-lg text-body-lg text-on-surface/70 max-w-2xl italic">
+            Thoughtfully designed kitchens, wardrobes, and workstations crafted with precision engineering and timeless aesthetics.
+      </p>
+        
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+      <!-- Kitchens -->
+      <article class="group reveal">
+        <div class="overflow-hidden border border-white/20 mb-8">
+          <img
+            src="https://st.hzcdn.com/simgs/6ed17ff20d15389a_14-9308/_.jpg"
+            alt="Kitchen Cabinetry"
+            class="w-full h-[520px] object-cover transition-transform duration-700 group-hover:scale-105"
+          >
+        </div>
+
+        <span class="text-gold text-sm tracking-[0.25em] uppercase block mb-3">
+          01
+        </span>
+
+        <h3 class=" text-5xl cormorant text-white mb-4">
+          Kitchens
+        </h3>
+
+        <p class="text-on-surface/70 leading-relaxed">
+          Modular kitchen systems engineered for efficiency, durability,
+          and contemporary living. Designed to seamlessly blend
+          functionality with refined craftsmanship.
+        </p>
+      </article>
+
+      <!-- Wardrobes -->
+      <article class="group reveal" style="transition-delay:0.15s;">
+        <div class="overflow-hidden border border-white/20 mb-8">
+          <img
+            src="https://i.pinimg.com/736x/cc/31/e3/cc31e341f16b78d3648e5ab72a4dd64f.jpg"
+            alt="Wardrobes"
+            class="w-full h-[520px] object-cover transition-transform duration-700 group-hover:scale-105"
+          >
+        </div>
+
+        <span class="text-gold text-sm tracking-[0.25em] uppercase block mb-3">
+          02
+        </span>
+
+        <h3 class=" text-5xl cormorant text-white mb-4">
+          Wardrobes
+        </h3>
+
+        <p class="text-on-surface/70 leading-relaxed">
+          Bespoke wardrobe solutions offering elegant storage,
+          intelligent organization, and premium finishes tailored
+          to sophisticated interiors.
+        </p>
+      </article>
+
+      <!-- Workstations -->
+      <article class="group reveal" style="transition-delay:0.3s;">
+        <div class="overflow-hidden border border-white/20 mb-8">
+          <img
+            src="https://tiimg.tistatic.com/fp/1/008/621/polished-wooden-office-workstation-088.jpg"
+            alt="Workstations"
+            class="w-full h-[520px] object-cover transition-transform duration-700 group-hover:scale-105"
+          >
+        </div>
+
+        <span class="text-gold text-sm tracking-[0.25em] uppercase block mb-3">
+          03
+        </span>
+
+        <h3 class=" text-5xl cormorant text-white mb-4">
+          Workstations
+        </h3>
+
+        <p class="text-on-surface/70 leading-relaxed">
+          Ergonomically planned workspaces that balance productivity,
+          aesthetics, and comfort for modern professional environments.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- Engineered Solutions Block -->
+<div class="reveal">
+<div class="bg-surface-container-lowest border border-gold/30 p-10 md:p-16">
+<div class="flex flex-col md:flex-row gap-16">
+<div class="md:w-1/3">
+<h3 class="font-headline-sm text-2xl text-gold uppercase mb-6 tracking-widest">Engineered Solutions</h3>
+<p class="text-on-surface/60 font-body-md italic leading-relaxed mb-8">
+                                Our advanced materials department focuses on specialized industrial applications for high-traffic and demanding environments.
+                            </p>
+<div class="flex items-center gap-4 border-l-2 border-gold pl-6">
+<div>
+<h6 class="font-label-lg text-white tracking-widest mb-1">LVL CORE</h6>
+<p class="text-on-surface/50 text-xs uppercase">Laminated Veneer Lumber</p>
+</div>
+</div>
+</div>
+<div class="md:w-2/3">
+<h4 class="font-label-lg text-on-surface/40 mb-10 tracking-[0.3em] uppercase">Surface Technologies</h4>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4">
+<span class="material-symbols-outlined text-gold text-3xl">wb_sunny</span>
+<h6 class="font-headline-sm text-lg text-white uppercase italic">UV Painted</h6>
+<p class="text-on-surface/60 text-sm italic">Superior scratch resistance and color stability via ultraviolet curing.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="material-symbols-outlined text-gold text-3xl">fingerprint</span>
+<h6 class="font-headline-sm text-lg text-white uppercase italic">Anti-Fingerprint</h6>
+<p class="text-on-surface/60 text-sm italic">Nano-coating technology that maintains a pristine matte surface.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="material-symbols-outlined text-gold text-3xl">shield</span>
+<h6 class="font-headline-sm text-lg text-white uppercase italic">Scratch Resistant</h6>
+<p class="text-on-surface/60 text-sm italic">High-performance protective layers for high-traffic commercial use.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest text-on-surface py-24" id="contact">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-20">
+<div class="md:col-span-4">
+<div class="flex items-center gap-4 mb-8">
+<img alt="INTERA" class="h-10 w-auto object-contain brightness-125 saturate-150 px-50 py-30" src="logotransparent.png" />
+
+</div>
+<p class="text-on-surface/60 font-body-md mb-8 max-w-xs">
+                    Pioneering industrial luxury in cabinetry and door manufacturing for high-end architectural environments.
+                </p>
+<div class="flex gap-4">
+<a class="h-10 w-10 flex items-center justify-center border border-gold-thin/30 hover:border-gold text-gold transition-colors" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="h-10 w-10 flex items-center justify-center border border-gold-thin/30 hover:border-gold text-gold transition-colors" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+<a class="h-10 w-10 flex items-center justify-center border border-gold-thin/30 hover:border-gold text-gold transition-colors" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+</div>
+</div>
+<div class="md:col-span-3 md:col-start-8">
+<p class="font-label-lg text-label-md text-gold mb-6">NAVIGATION</p>
+<ul class="space-y-4 font-label-lg text-label-md text-on-surface/60">
+<li><a class="hover:text-gold transition-colors" href="index.html#about">ABOUT</a></li>
+<li><a class="hover:text-gold transition-colors" href="index.html#excellence">EXCELLENCE</a></li>
+        <li><a class="hover:text-gold transition-colors" href="process.html">OUR PROCESS</a></li>
+         <li><a class="hover:text-gold transition-colors" href="products.html">PRODUCTS</a></li>
+
+<li><a class="hover:text-gold transition-colors" href="intera-ai.html">INTERA-AI</a></li>
+<li><a class="hover:text-gold transition-colors" href="index.html#clients">CLIENTS</a></li>
+<li><a class="hover:text-gold transition-colors" href="index.html#team">OUR TEAM</a></li>
+<li><a class="hover:text-gold transition-colors" href="index.html#locations">LOCATIONS</a></li>
+</ul>
+</div>
+
+
+
+</div>
+<div class="pt-10 border-t border-gold-thin/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-label-lg text-[10px] text-on-surface/120 tracking-widest">
+                © 2024 INTERA INDUSTRIES. ENGINEERED DURABILITY. ALL RIGHTS RESERVED.
+            </p>
+
+</div>
+</div>
+</footer>
+<script>
+  
+    // Scroll Interactions
+    const nav = document.getElementById('main-nav');
+    const reveals = document.querySelectorAll('.reveal');
+    
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.getElementById("productSlider");
+
+  // Duplicate cards for seamless looping
+  slider.innerHTML += slider.innerHTML;
+});
+
+    function handleScroll() {
+        // Navbar transition
+        if (window.scrollY > 50) {
+            nav.classList.add('glass-nav', 'border-gold-thin/20');
+            nav.classList.remove('border-transparent');
+        } else {
+            nav.classList.remove('glass-nav', 'border-gold-thin/20');
+            nav.classList.add('border-transparent');
+        }
+
+        // Reveal animations
+        const triggerBottom = window.innerHeight / 5 * 4;
+        reveals.forEach(reveal => {
+            const revealTop = reveal.getBoundingClientRect().top;
+            if (revealTop < triggerBottom) {
+                reveal.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    // Trigger initial check
+    handleScroll();
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+    link.addEventListener("click", function(e) {
+
+        const targetId = this.getAttribute("href");
+
+        if(targetId === "#") return;
+
+        e.preventDefault();
+
+        const target =
+            document.querySelector(targetId);
+
+        if(!target) return;
+
+        const start =
+            window.pageYOffset;
+
+        const end =
+            target.offsetTop - 100;
+
+        const duration = 1500;
+
+        let startTime = null;
+
+        function easeInOutCubic(t){
+            return t < 0.5
+                ? 4 * t * t * t
+                : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function animate(currentTime){
+
+            if(!startTime)
+                startTime = currentTime;
+
+            const elapsed =
+                currentTime - startTime;
+
+            const progress =
+                Math.min(elapsed / duration, 1);
+
+            const eased =
+                easeInOutCubic(progress);
+
+            window.scrollTo(
+                0,
+                start + (end - start) * eased
+            );
+
+            if(progress < 1){
+                requestAnimationFrame(animate);
+            }
+        }
+
+        requestAnimationFrame(animate);
+
+    });
+
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.getElementById("door-slider");
+
+  if (!slider) return;
+
+  const cards = slider.querySelectorAll(".snap-start");
+  const gap = 32; // gap-8 = 32px
+
+  let current = 0;
+
+  setInterval(() => {
+    current++;
+
+    if (current >= cards.length) {
+      current = 0;
+    }
+
+    slider.scrollTo({
+      left: current * (cards[0].offsetWidth + gap),
+      behavior: "smooth"
+    });
+  }, 3000); // change slide every 3 sec
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const doorSliderInner = document.getElementById("doorSliderInner");
+
+  if (doorSliderInner) {
+    // Duplicate the 4 door items for a seamless infinite illusion
+    doorSliderInner.innerHTML += doorSliderInner.innerHTML;
+  }
+});
+    
+</script>
+</body></html>
