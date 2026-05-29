@@ -101,85 +101,72 @@
         }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .reveal { opacity: 1; transform: translateY(0); } /* Always visible on subpage for immediate impact */
-        
-        .glass-nav {
-            backdrop-filter: blur(12px);
-            background-color: rgba(18, 20, 20, 0.95);
-        }
-/* Custom scrollbar settings for mobile track styling if desired */
-.gold-scrollbar::-webkit-scrollbar {
-  height: 4px;
-}
-.gold-scrollbar::-webkit-scrollbar-thumb {
-  background: #d4af37; /* or your specific gold token */
-  border-radius: 10px;
-}
+    /* Material Icons & Global Base */
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    
+    body {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .reveal { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
 
-/* Only run the automatic marquee animation on desktop screens */
-@media (min-width: 768px) {
-  #doorSliderInner {
-    padding-right: 32px; 
-    animation: doorMarquee 10s linear infinite;
-  }
+    /* Navigation & Overlay Gradients */
+    .glass-nav {
+        backdrop-filter: blur(12px);
+        background-color: rgba(18, 20, 20, 0.95);
+    }
+    
+    .border-gold-thin { 
+        border-color: rgba(212, 175, 55, 0.2); 
+    }
+    
+    .gold-overlay {
+        background: linear-gradient(to top, rgba(18, 20, 20, 0.95) 0%, rgba(18, 20, 20, 0.4) 50%, transparent 100%);
+    }
 
-  #doorSliderInner:hover {
-    animation-play-state: paused;
-  }
-}
+    /* Mobile & Global Slider Configurations */
+    #door-slider {
+        -webkit-overflow-scrolling: touch; /* Momentum scrolling for iOS touch screens */
+    }
 
-@keyframes doorMarquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-        .border-gold-thin { border-color: rgba(212, 175, 55, 0.2); }
-        
-        .gold-overlay {
-            background: linear-gradient(to top, rgba(18, 20, 20, 0.95) 0%, rgba(18, 20, 20, 0.4) 50%, transparent 100%);
-        }
+    /* Custom Gold Scrollbar Track Styling */
+    .gold-scrollbar::-webkit-scrollbar {
+        height: 4px;
+    }
+    .gold-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .gold-scrollbar::-webkit-scrollbar-thumb {
+        background: #D4AF37;
+        border-radius: 10px;
+    }
+
+    /* Desktop Only Marquee Loop Animation (768px and up) */
+    @media (min-width: 768px) {
         #doorSliderInner {
-  /* gap-8 is 32px, so we add a padding-right equal to the gap 
-     to ensure the looped element doesn't snap abruptly */
-  padding-right: 32px; 
-  animation: doorMarquee 10s linear infinite;
-}
-
-/* Pause the scrolling animation when a user hovers to read */
-#doorSliderInner:hover {
-  animation-play-state: paused;
-}
-
-@keyframes doorMarquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    /* Moves exactly halfway through the combined width (Original + Clone) */
-    transform: translateX(-50%);
-  }
-}
-
-        .gold-scrollbar::-webkit-scrollbar {
-            height: 4px;
-        }
-        .gold-scrollbar::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .gold-scrollbar::-webkit-scrollbar-thumb {
-            background: #D4AF37;
+            padding-right: 32px; 
+            animation: doorMarquee 20s linear infinite;
         }
 
-        body {
-            font-family: 'Cormorant Garamond', serif;
+        #doorSliderInner:hover {
+            animation-play-state: paused; /* Halts animation when reading */
         }
-    </style>
+    }
+
+    @keyframes doorMarquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+</style>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-gold selection:text-surface-container-lowest overflow-x-hidden">
 <!-- Top Navigation -->
