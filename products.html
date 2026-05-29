@@ -614,7 +614,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const doorSliderInner = document.getElementById("doorSliderInner");
 
-  // Only duplicate items if the screen width is desktop-sized (768px or wider)
+  // CRITICAL FIX: Only duplicate and run if the screen is desktop width
   if (doorSliderInner && window.innerWidth >= 768) {
     doorSliderInner.innerHTML += doorSliderInner.innerHTML;
   }
